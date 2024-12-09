@@ -1,0 +1,51 @@
+Tipos de Ocorrência:
+
+Velocidade:80
+Velocidade:70
+Velocidade:60
+Velocidade:50
+Velocidade:40
+Rodízio
+Corredor de ônibus
+Estacionamento proibido
+Avanço de sinal
+Conversão proibida
+Uso de celular
+Sem cinto de segurança
+
+Logradouros: 
+
+Avenida Paulista
+Avenida Rebouças
+Avenida 23 de Maio
+Avenida Nações Unidas
+Rua Augusta
+Avenida Ibirapuera
+Rua Haddock Lobo
+Avenida Santo Amaro
+Avenida Vereador José Diniz
+Avenida Brigadeiro Luís Antônio
+Rua da Consolação
+Avenida Faria Lima
+Avenida Brasil
+
+Exemplos de placas:
+
+ABC1234
+XYZ5678
+LMN8910
+DEF4567
+JKL3210
+GHJ7894
+QWE1122
+TYO5567
+UIE9087
+CVB4321
+
+Datas de exemplo:
+
+2024-12-01
+2024-12-02
+2024-12-03
+2024-12-04
+2024-12-05
