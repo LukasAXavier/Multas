@@ -19,18 +19,12 @@ public abstract class RegraMulta {
         return descricao;
     }
 
-    // Retorna o valor da multa
-    public double getValor() {
-        return valor;
-    }
-
-    // Cria uma multa baseada na ocorrência e na regra
+    // Retorna uma multa com base na ocorrência, se aplicável
     public Multa calcularMulta(Ocorrencia ocorrencia) {
         int nivelMulta = verificaNivelMulta(ocorrencia);
-        if (nivelMulta > 0) {
-            return new Multa(descricao, valor, nivelMulta, ocorrencia.getPlaca());
+        if (nivelMulta > 0) { // Se houver multa
+            return new Multa(descricao, valor, nivelMulta, ocorrencia.getPlaca(), ocorrencia.getData());
         }
         return null; // Sem multa
     }
 }
-

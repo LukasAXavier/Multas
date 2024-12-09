@@ -14,12 +14,13 @@ public class RegraRodizio extends RegraMulta {
 
     @Override
     public int verificaNivelMulta(Ocorrencia ocorrencia) {
-        int diaAtual = java.time.LocalDate.now().getDayOfWeek().getValue(); // Dia atual da semana
-        if (diaAtual == diaSemana) {
+        // Dia da semana baseado na data da ocorrência
+        int diaOcorrencia = ocorrencia.getData().getDayOfWeek().getValue();
+        if (diaOcorrencia == diaSemana) { // Verifica se é o dia de rodízio
             for (String logradouro : logradouros) {
                 if (ocorrencia.getLogradouro().equals(logradouro) &&
                     ocorrencia.getPlaca().endsWith(String.valueOf(finalPlacaRestrito))) {
-                    return nivel;
+                    return nivel; // Retorna o nível da multa
                 }
             }
         }
