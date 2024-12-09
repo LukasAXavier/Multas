@@ -1,2 +1,4 @@
 DATA,PLACA,TIPO_DE_INFRAÇÃO,LOGRADOURO
-2024-12-08,LMN8910,Velocidade:80,Avenida Paulista
+2024-12-09,ABC1234,Velocidade:80,Avenida Paulista
+2024-12-09,XYZ5678,Rodízio,Avenida 23 de Maio
+2024-12-09,LMN8910,Corredor de ônibus,Avenida Santo Amaro

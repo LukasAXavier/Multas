@@ -24,16 +24,20 @@ public class Main {
             boolean executando = true;
 
             while (executando) {
-                System.out.println("\nSelecione uma opção:");
+                System.out.println("\n===== Sistema de Multas de Trânsito =====");
+                System.out.println("Selecione uma opção:");
                 System.out.println("1. Registrar nova ocorrência");
                 System.out.println("2. Processar ocorrências");
                 System.out.println("3. Listar multas");
-                System.out.println("4. Sair");
-                System.out.println("5. Carregar ocorrências de arquivo");
-                System.out.println("6. Salvar ocorrências em arquivo");
-                System.out.println("7. Limpar todas as ocorrências do sistema");
-                System.out.println("8. Buscar multas por placa");
-                System.out.println("9. Buscar multas por data");
+                System.out.println("4. Carregar ocorrências de arquivo");
+                System.out.println("5. Salvar ocorrências em arquivo");
+                System.out.println("6. Buscar multas por placa");
+                System.out.println("7. Buscar multas por data");
+                System.out.println("=======================================");
+                System.out.println("8. Limpar todas as ocorrências do sistema");
+                System.out.println("9. Sair");
+                System.out.println("=======================================");
+                System.out.print("Digite sua opção: ");
 
                 int opcao = scanner.nextInt();
                 scanner.nextLine(); // Consumir quebra de linha
@@ -78,16 +82,7 @@ public class Main {
                         }
                         break;
 
-                    case 4:
-                        executando = false;
-                        System.out.println("Encerrando o sistema...");
-                        break;
-
-                    default:
-                        System.out.println("Opção inválida. Tente novamente.");
-                        break;
-
-                    case 5: // Nova opção para carregar ocorrências
+                    case 4: // Carregar ocorrências
                         System.out.print("Digite o caminho do arquivo de ocorrências: ");
                         String caminhoArquivo = scanner.nextLine();
                         List<Ocorrencia> novasOcorrencias = ArquivoUtils.lerOcorrencias(caminhoArquivo);
@@ -100,23 +95,13 @@ public class Main {
                         }
                         break;
 
-                    case 6:
+                    case 5:
                         System.out.print("Digite o caminho para salvar o arquivo: ");
                         String caminhoSalvar = scanner.nextLine();
                         ArquivoUtils.salvarOcorrencias(caminhoSalvar, baseDeDados.getOcorrenciasProcessadas());
                         break;
 
-                    case 7: // Limpar todas as ocorrências
-                        System.out.print("Tem certeza que deseja limpar todas as ocorrências? (s/n): ");
-                        String confirmacao = scanner.nextLine().toLowerCase();
-                        if (confirmacao.equals("s")) {
-                            baseDeDados.limparOcorrencias();
-                        } else {
-                            System.out.println("Operação de limpeza cancelada.");
-                        }
-                        break;
-
-                    case 8: // Buscar multas por placa
+                    case 6: // Buscar multas por placa
                         System.out.print("Digite a placa do veículo: ");
                         String placaBusca = scanner.nextLine();
                         List<Multa> multasEncontradas = baseDeDados.buscarMultasPorPlaca(placaBusca);
@@ -134,7 +119,7 @@ public class Main {
                         }
                         break;
 
-                    case 9: // Buscar multas por data
+                    case 7: // Buscar multas por data
                         System.out.print("Digite a data (AAAA-MM-DD): ");
                         String dataBusca = scanner.nextLine();
                         List<Multa> multasPorData = baseDeDados.buscarMultasPorData(dataBusca);
@@ -153,6 +138,26 @@ public class Main {
                             });
                         }
                         break;
+
+                    case 8: // Limpar todas as ocorrências
+                        System.out.print("Tem certeza que deseja limpar todas as ocorrências? (s/n): ");
+                        String confirmacao = scanner.nextLine().toLowerCase();
+                        if (confirmacao.equals("s")) {
+                            baseDeDados.limparOcorrencias();
+                        } else {
+                            System.out.println("Operação de limpeza cancelada.");
+                        }
+                        break;
+
+                    case 9:
+                        executando = false;
+                        System.out.println("Encerrando o sistema...");
+                        break;
+
+                    default:
+                        System.out.println("Opção inválida. Tente novamente.");
+                        break;
+
                 }
             }
         }
