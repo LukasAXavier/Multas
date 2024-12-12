@@ -8,7 +8,7 @@ import models.Ocorrencia;
 import models.RegraCorredorOnibus;
 import models.RegraMulta;
 import models.RegraRodizio;
-import models.RegraVelocidade;
+import models.RegraVelocidade; 
 
 public class BaseDeDados {
 
