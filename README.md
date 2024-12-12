@@ -1,5 +1,13 @@
-Nomes dos integrantes:
+# Informações adicionais
 
-Álvaro Pereira Araújo, Lukas de Andrade Xavier, Bruno Orati Sena, Vitor Orati Sena.
+## Nomes dos integrantes:
+
+- **Álvaro Pereira Araújo**
+- **Lukas de Andrade Xavier**
+- **Bruno Orati Sena**
+- **Vitor Orati Sena** 
 
 Link do vídeo:
+[Link do vídeo](Linkdovídeo.com.br)
+
+<img src="logo-SENAC.png" alt="Descrição da imagem" width="75" height="75">
