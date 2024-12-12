@@ -11,12 +11,13 @@ import models.RegraRodizio;
 import models.RegraVelocidade; 
 
 public class BaseDeDados {
-
+// Atributos List - Composição
     private List<Ocorrencia> ocorrenciasNaoProcessadas;
     private List<Ocorrencia> ocorrenciasProcessadas;
     private List<Multa> multas;
     private List<RegraMulta> regras;
 
+// Método Construtor
     public BaseDeDados() {
         this.ocorrenciasNaoProcessadas = new ArrayList<>();
         this.ocorrenciasProcessadas = new ArrayList<>();
