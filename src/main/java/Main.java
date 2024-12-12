@@ -24,6 +24,8 @@ public class Main {
             boolean executando = true;
 
             while (executando) {
+                // Interface de seleção do usuário
+
                 System.out.println("\n===== Sistema de Multas de Trânsito =====");
                 System.out.println("Selecione uma opção:");
                 System.out.println("1. Registrar nova ocorrência");
@@ -140,7 +142,7 @@ public class Main {
                         break;
 
                     case 8: // Limpar todas as ocorrências
-                        System.out.print("Tem certeza que deseja limpar todas as ocorrências? (s/n): ");
+                        System.out.print("Tem certeza que deseja limpar todas as ocorrências? (S/N): ");
                         String confirmacao = scanner.nextLine().toLowerCase();
                         if (confirmacao.equals("s")) {
                             baseDeDados.limparOcorrencias();
