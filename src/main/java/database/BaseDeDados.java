@@ -134,6 +134,12 @@ public List<Multa> buscarMultasPorPlaca(String placa) {
                 "Rodízio na Avenida Brasil", 3, 190.00, 6, new String[]{"Avenida Brasil"}, 6));
         regras.add(new RegraCorredorOnibus(
                 "Trânsito ilegal no corredor de ônibus da Avenida Faria Lima", 3, 240.00, 7, 21, "Avenida Faria Lima"));
+        regras.add(new RegraVelocidade(
+                "Excesso de Velocidade na Marginal Tietê", 2, 180.00, 50, "Marginal Tietê"));
+        regras.add(new RegraRodizio(
+                "Rodízio na Rua 25 de Março", 2, 150.00, 4, new String[]{"Rua 25 de Março"}, 4));
+        regras.add(new RegraCorredorOnibus(
+                "Trânsito ilegal no corredor de ônibus da Avenida Paulista", 4, 300.00, 10, 22, "Avenida Paulista"));
     }
 
     //Limpar as ocorrencias do sistema
