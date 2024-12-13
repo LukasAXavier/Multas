@@ -26,18 +26,19 @@ public class Main {
             while (executando) {
                 // Interface de seleção do usuário
 
-                System.out.println("\n===== Sistema de Multas de Trânsito =====");
-                System.out.println("Selecione uma opção:");
-                System.out.println("1. Registrar nova ocorrência");
-                System.out.println("2. Processar ocorrências");
-                System.out.println("3. Listar multas");
-                System.out.println("4. Carregar ocorrências de arquivo");
-                System.out.println("5. Salvar ocorrências em arquivo");
-                System.out.println("6. Buscar multas por placa");
-                System.out.println("7. Buscar multas por data");
+                System.out.println("\n=======================================");
+                System.out.println("    Sistema de Multas de Trânsito    ");
                 System.out.println("=======================================");
-                System.out.println("8. Limpar todas as ocorrências do sistema");
-                System.out.println("9. Sair");
+                System.out.println("  [1] Registrar nova ocorrência       ");
+                System.out.println("  [2] Processar ocorrências           ");
+                System.out.println("  [3] Listar multas                   ");
+                System.out.println("  [4] Carregar ocorrências de arquivo ");
+                System.out.println("  [5] Salvar ocorrências em arquivo   ");
+                System.out.println("  [6] Buscar multas por placa         ");
+                System.out.println("  [7] Buscar multas por data          ");
+                System.out.println("---------------------------------------");
+                System.out.println("  [8] Limpar todas as ocorrências     ");
+                System.out.println("  [9] Sair                            ");
                 System.out.println("=======================================");
                 System.out.print("Digite sua opção: ");
 
