@@ -1,6 +1,7 @@
 package database;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
 import java.util.List;
 import models.Multa;
@@ -45,28 +46,48 @@ public class BaseDeDados {
     }
 
     // Buscar multas por data
-    public List<Multa> buscarMultasPorData(String data) {
-        List<Multa> resultado = new ArrayList<>();
-        LocalDate dataBusca = LocalDate.parse(data);
-
-        for (Multa multa : multas) {
-            if (multa.getData().equals(dataBusca)) {
-                resultado.add(multa);
-            }
-        }
-        return resultado;
+public List<Multa> buscarMultasPorData(String data) {
+    // Validação básica da entrada
+    if (data == null || data.isEmpty()) {
+        throw new IllegalArgumentException("A data informada não pode ser nula ou vazia.");
     }
 
-    // Buscar multas por placa
-    public List<Multa> buscarMultasPorPlaca(String placa) {
-        List<Multa> resultado = new ArrayList<>();
-        for (Multa multa : multas) {
-            if (multa.getPlaca().equalsIgnoreCase(placa)) {
-                resultado.add(multa);
-            }
-        }
-        return resultado;
+    // Conversão da String para LocalDate
+    LocalDate dataBusca;
+    try {
+        dataBusca = LocalDate.parse(data);
+    } catch (DateTimeParseException e) {
+        throw new IllegalArgumentException("Formato de data inválido. Use o formato 'AAAA-MM-DD'.", e);
     }
+
+    // Filtragem das multas que correspondem à data informada
+    List<Multa> resultado = new ArrayList<>();
+    for (Multa multa : multas) {
+        if (multa.getData().equals(dataBusca)) {
+            resultado.add(multa);
+        }
+    }
+
+    return resultado;
+}
+
+// Buscar multas por placa
+public List<Multa> buscarMultasPorPlaca(String placa) {
+    // Validação básica da entrada
+    if (placa == null || placa.isEmpty()) {
+        throw new IllegalArgumentException("A placa informada não pode ser nula ou vazia.");
+    }
+
+    // Filtragem das multas que correspondem à placa informada
+    List<Multa> resultado = new ArrayList<>();
+    for (Multa multa : multas) {
+        if (multa.getPlaca().equalsIgnoreCase(placa)) {
+            resultado.add(multa);
+        }
+    }
+
+    return resultado;
+}
 
     // Inicializar regras programaticamente
     public void inicializaRegras() {
