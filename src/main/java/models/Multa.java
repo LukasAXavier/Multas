@@ -8,7 +8,7 @@ public class Multa {
     private double valor;
     private int nivel;
     private String placa;
-    private LocalDate data; // Novo campo para armazenar a data
+    private LocalDate data; //Novo campo para armazenar a data
 
     // Construtor atualizado
     public Multa(String descricao, double valor, int nivel, String placa, LocalDate data) {
