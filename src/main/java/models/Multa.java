@@ -63,10 +63,11 @@ public class Multa {
     // Sobrescrevendo toString para exibir detalhes da multa
     @Override
     public String toString() {
-        return "- Descrição: " + descricao +
-               "\n  Valor: R$" + valor +
-               "\n  Nível: " + nivel +
-               "\n  Placa: " + placa +
-               "\n  Data: " + data;
+        return "Multa Detalhes: \n" +
+               "  - Descrição: " + descricao + "\n" +
+               "  - Valor: R$" + valor + "\n" +
+               "  - Nível: " + nivel + "\n" +
+               "  - Placa: " + placa + "\n" +
+               "  - Data: " + data;
     }
 }
